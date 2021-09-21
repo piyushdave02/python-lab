@@ -1,0 +1,53 @@
+Python 3.9.7 (tags/v3.9.7:1016ef3, Aug 30 2021, 20:19:38) [MSC v.1929 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>> mylist = ["apple", "banana", "cherry"]
+>>> print(mylist)
+['apple', 'banana', 'cherry']
+>>> mylist = ["apple", "banana", "cherry", "apple", "cherry"]
+>>> print(mylist)
+['apple', 'banana', 'cherry', 'apple', 'cherry']
+>>> mylist = ["apple", "banana", "cherry"]
+>>> print(len(mylist))
+3
+>>> list1 = ["apple", "banana", "cherry"]
+>>> list2 = [1, 5, 7, 9, 3]
+>>> list3 = [True, False, False]
+>>> print(list1)
+['apple', 'banana', 'cherry']
+>>> print(list2)
+[1, 5, 7, 9, 3]
+>>> print(list3)
+[True, False, False]
+>>> mylist = ["apple", "banana", "cherry"]
+>>> print(type(mylist))
+<class 'list'>
+>>> mylist = list(("apple", "banana", "cherry"))
+>>> print(mylist)
+['apple', 'banana', 'cherry']
+>>> mylist = ["apple", "banana", "cherry"]
+>>> print(mylist[1])
+banana
+>>> mylist = ["apple", "banana", "cherry", "orange", "kiwi", "melon", "mango"]
+>>> print(mylist[2:5])
+['cherry', 'orange', 'kiwi']
+>>> mylist = ["apple", "banana", "cherry", "orange", "kiwi", "melon", "mango"]
+>>> print(mylist[:4])
+['apple', 'banana', 'cherry', 'orange']
+>>> mylist = ["apple", "banana", "cherry", "orange", "kiwi", "melon", "mango"]
+>>> print(mylist[2:])
+['cherry', 'orange', 'kiwi', 'melon', 'mango']
+>>> mylist = ["apple", "banana", "cherry", "orange", "kiwi", "melon", "mango"]
+>>> print(mylist[-4:-1])
+['orange', 'kiwi', 'melon']
+>>> mylist = ["apple", "banana", "cherry"]
+>>> if "apple" in mylist:
+... print("Yes, 'apple' is in the fruits list")
+  File "<stdin>", line 2
+    print("Yes, 'apple' is in the fruits list")
+    ^
+IndentationError: expected an indented block
+>>> if "apple" in mylist:
+...   print("Yes, 'apple' is in the fruits list")
+...
+Yes, 'apple' is in the fruits list
+>>>
