@@ -1,0 +1,84 @@
+que = []  
+  
+que.append('Apple')  
+que.append('Mango')  
+que.append('Papaya')  
+  
+print(que)  
+print(que.pop(0)) 
+
+//output//
+['Apple', 'Mango', 'Papaya']
+Apple
+
+
+...Program finished with exit code 0
+Press ENTER to exit console.
+
+# Initializing a queue
+queue = []
+ 
+# Adding elements to the queue
+queue.append('a')
+queue.append('b')
+queue.append('c')
+ 
+print("Initial queue")
+print(queue)
+ 
+# Removing elements from the queue
+print("\nElements dequeued from queue")
+print(queue.pop(0))
+print(queue.pop(0))
+print(queue.pop(0))
+ 
+print("\nQueue after removing elements")
+print(queue)
+
+//output//
+Initial queue
+['a', 'b', 'c']
+
+Elements dequeued from queue
+a
+b
+c
+
+Queue after removing elements
+[]
+
+
+...Program finished with exit code 0
+Press ENTER to exit console.
+import collections
+de = collections.deque([1, 2, 3, 3, 4, 2, 4])
+  
+print ("The number 4 first occurs at a position : ")
+print (de.index(4,2,5))
+  
+de.insert(4,3)
+  
+print ("The deque after inserting 3 at 5th position is : ")
+print (de)
+print ("The count of 3 in deque is : ")
+print (de.count(3))
+  
+de.remove(3)
+  
+print ("The deque after deleting first occurrence of 3 is : ")
+print (de)
+
+//output//
+
+The number 4 first occurs at a position : 
+4
+The deque after inserting 3 at 5th position is : 
+deque([1, 2, 3, 3, 3, 4, 2, 4])
+The count of 3 in deque is : 
+3
+The deque after deleting first occurrence of 3 is : 
+deque([1, 2, 3, 3, 4, 2, 4])
+
+
+...Program finished with exit code 0
+Press ENTER to exit console.
