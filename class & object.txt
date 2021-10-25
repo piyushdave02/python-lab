@@ -1,0 +1,54 @@
+class Dog:
+    pass
+class Dog:
+     
+    attr1 = "mammal"
+    attr2 = "dog"
+    def fun(self):
+        print("I'm a", self.attr1)
+        print("I'm a", self.attr2)
+Rodger = Dog()
+print(Rodger.attr1)
+Rodger.fun()
+
+
+//output//
+
+mammal
+I'm a mammal
+I'm a dog
+
+
+...Program finished with exit code 0
+Press ENTER to exit console.
+
+
+class Person:
+  def __init__(self, name, age):
+    self.name = name
+    self.age = age
+
+p1 = Person("piyush", 20)
+
+print(p1.name)
+print(p1.age)
+class Person:
+  def __init__(self, name, age):
+    self.name = name
+    self.age = age
+
+  def myfunc(self):
+    print("Hello my name is " + self.name)
+
+p1 = Person("piyush", 20)
+p1.myfunc()
+
+//output//
+
+piyush
+20
+Hello my name is piyush
+
+
+...Program finished with exit code 0
+Press ENTER to exit console.

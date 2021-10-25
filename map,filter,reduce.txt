@@ -1,0 +1,47 @@
+Python 3.9.7 (tags/v3.9.7:1016ef3, Aug 30 2021, 20:19:38) [MSC v.1929 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>> # Without using lambdas
+>>> def starts_with_A(s):
+...     return s[0] == "A"
+...
+>>> fruit = ["Apple", "Banana", "Pear", "Apricot", "Orange"]
+>>> map_object = map(starts_with_A, fruit)
+>>> print(list(map_object))
+[True, False, False, True, False]
+
+>>> fruit = ["Apple", "Banana", "Pear", "Apricot", "Orange"]
+>>> map_object = map(lambda s: s[0] == "A", fruit)
+>>> print(list(map_object))
+[True, False, False, True, False]
+
+>>> # Without using lambdas
+>>> def starts_with_A(s):
+...     return s[0] == "A"
+...
+>>> fruit = ["Apple", "Banana", "Pear", "Apricot", "Orange"]
+>>> filter_object = filter(starts_with_A, fruit)
+>>> print(list(filter_object))
+['Apple', 'Apricot']
+
+>>> fruit = ["Apple", "Banana", "Pear", "Apricot", "Orange"]
+>>> filter_object = filter(lambda s: s[0] == "A", fruit)
+>>> print(list(filter_object))
+['Apple', 'Apricot']
+    
+     # Without using lambdas
+>>> from functools import reduce
+>>>
+>>> def add(x, y):
+...     return x + y
+...
+>>> list = [2, 4, 7, 3]
+>>> print(reduce(add, list))
+16
+>>> from functools import reduce
+>>>
+>>> list = [2, 4, 7, 3]
+>>> print(reduce(lambda x, y: x + y, list))
+16
+>>> print("With an initial value: " + str(reduce(lambda x, y: x + y, list, 10)))
+With an initial value: 26
+>>>

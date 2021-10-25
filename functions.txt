@@ -1,0 +1,52 @@
+def my_function():
+  print("Hello")
+
+my_function()
+def evenOdd(x):
+    if (x % 2 == 0):
+        print("even")
+    else:
+        print("odd")
+ 
+evenOdd(2)
+evenOdd(3)
+def student(firstname, lastname):
+    print(firstname, lastname)
+ 
+
+student(firstname='Piyush', lastname='Dave')
+student(lastname='Dave', firstname='Piyush')
+def square_value(num):
+    """This function returns the square
+    value of the entered number"""
+    return num**2
+ 
+ 
+print(square_value(2))
+print(square_value(-4))
+def swap(x, y):
+    temp = x
+    x = y
+    y = temp
+ 
+x = 2
+y = 3
+swap(x, y)
+print(x)
+print(y)
+
+//output//
+
+Hello
+even
+odd
+Piyush Dave
+Piyush Dave
+4
+16
+2
+3
+
+
+...Program finished with exit code 0
+Press ENTER to exit console.
