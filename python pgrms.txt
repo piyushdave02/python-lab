@@ -246,7 +246,7 @@ else:
 
 26.
 num = int(input(" Enter the Number:"))  
-sum = 0  
+ sum = 0  
 temp = num  
   
 while(temp > 0):  
@@ -322,6 +322,426 @@ for i in range(rows + 1, 0, -1):
         # display star
         print("*", end=' ')
     print(" ")
+
+31.
+n = int(input("Enter number of rows: "))
+
+for i in range(1,n+1):
+    for j in range(1, i+1):
+        print(i, end="")
+    print()
+
+32.
+n = int(input("Enter number of rows: "))
+
+for i in range(1,n+1):
+    for j in range(1, i+1):
+        print(j, end="")
+    print()
+
+33.
+n = int(input("Enter number of rows: "))
+
+a = 97
+
+for i in range(1,n+1):
+    for j in range(1, i+1):
+        print("%c" %(a), end="")
+    a +=1
+    print()
+
+34.
+ 
+ str = input("Enter a string: ")
+
+print("Length of the input string is:", len(str))   
+    
+35.
+   str1 = input ( "Please Enter First String : " )
+str2 = input ( "Please Enter Second String : " )
+x = str1[ 0 : 2 ]
+str1 = str1.replace(str1[ 0 : 2 ],str2[ 0 : 2 ])
+str2 = str2.replace(str2[ 0 : 2 ],x)
+print ( "Your first string has become :- " ,str1)
+
+36.
+def add_string(str1):
+  length = len(str1)
+
+  if length > 2:
+    if str1[-3:] == 'ing':
+      str1 += 'ly'
+    else:
+      str1 += 'ing'
+
+  return str1
+print(add_string('ab'))
+print(add_string('abc'))
+print(add_string('string'))
+
+37.
+def char_frequency(str1):
+    dict = {}
+    for n in str1:
+        keys = dict.keys()
+        if n in keys:
+            dict[n] += 1
+        else:
+            dict[n] = 1
+    return dict
+print(char_frequency('google.com'))
+
+38.
+def change_sring(str1):
+      return str1[-1:] + str1[1:-1] + str1[:1]
+	  
+print(change_sring('abcd'))
+print(change_sring('12345'))
+
+39.
+def odd_values_string(str):
+  result = "" 
+  for i in range(len(str)):
+    if i % 2 == 0:
+      result = result + str[i]
+  return result
+
+print(odd_values_string('abcdef'))
+print(odd_values_string('python'))
+
+40.
+user_input = input("What's your favourite language? ")
+print("My favourite language is ", user_input.upper())
+print("My favourite language is ", user_input.lower())
+
+41.
+
+str1 = 'The quick brown fox jumps over the lazy dog.'
+print()
+print(str1.count("fox"))
+print()
+
+
+42.
+str1 = 'HELLOWORLD'
+print(str1[:4].lower() + str1[4:])
+
+43.
+def remove_spaces(str1):
+  str1 = str1.replace(' ','')
+  return str1
+    
+print(remove_spaces("w 3 res ou r ce"))
+print(remove_spaces("a b c"))
+
+44.
+
+def move_Spaces_front(str1):
+  noSpaces_char = [ch for ch in str1 if ch!=' ']
+  spaces_char = len(str1) - len(noSpaces_char)
+  result = ' '*spaces_char
+  result = '"'+result + ''.join(noSpaces_char)+'"'
+  return(result)
+
+print(move_Spaces_front("hellow    world  "))
+print(move_Spaces_front("   hellowworld "))
+
+45.
+
+test_str = "GeeksforGeeks"
+
+
+print ("The original string is : " + test_str)
+all_freq = {}
+for i in test_str:
+	if i in all_freq:
+		all_freq[i] += 1
+	else:
+		all_freq[i] = 1
+res = max(all_freq, key = all_freq.get)
+print ("The maximum of all characters in GeeksforGeeks is : " + str(res))
+
+
+46.
+
+    def capitalize_first_last_letters(str1):
+     str1 = result = str1.title()
+     result =  ""
+     for word in str1.split():
+        result += word[:-1] + word[-1].upper() + " "
+     return result[:-1]  
+     
+print(capitalize_first_last_letters("python exercises practice solution"))
+print(capitalize_first_last_letters("hello"))
+
+47.
+def test():
+
+num=input("Enter a number:")
+
+sum=0
+
+for i in num:
+
+sum+=int(i)
+
+print("Sum=", sum)
+
+
+48.
+
+def find_longest_word(words_list):
+    word_len = []
+    for n in words_list:
+        word_len.append((len(n), n))
+    word_len.sort()
+    return word_len[-1][0], word_len[-1][1]
+result = find_longest_word(["PHP", "Exercises", "Backend"])
+print("\nLongest word: ",result[1])
+print("Length of the longest word: ",result[0])
+
+49.
+
+def x(n):
+    return n^2 + 1
+
+print x(4)
+
+50.
+
+string = 'X-DSPAM-Confidence: 0.8475'
+
+col_pos = string.find(':')               
+number = string[col_pos + 1:]               
+confidence = float(number)                 
+print(confidence)
+
+51.
+
+def middleOfThree(a, b, c):
+	
+	if ((a < b and b < c) or (c < b and b < a)) :
+		return b;
+	if ((b < a and a < c) or (c < a and a < b)) :
+		return a;
+
+	else :
+		return c
+a = 20
+b = 30
+c = 40
+print(middleOfThree(a, b, c))
+
+52.
+
+class Rectangle():
+    def __init__(self, l, w):
+        self.length = l
+        self.width  = w
+
+    def rectangle_area(self):
+        return self.length*self.width
+
+newRectangle = Rectangle(12, 10)
+print(newRectangle.rectangle_area())
+
+
+53. 
+
+
+def func(a, b):
+    def cal(a,b):
+        return a+b
+    res = cal(a,b) + 5
+    return res
+func(4,4)  
+
+54.
+def recurSum(n):
+    if n <= 10:
+        return n
+    return n   *  recurSum(n - 1)
+ 
+
+n = 100
+print(recurSum(n))
+
+55.
+
+def factorial(n):
+    if n == 0:
+        return 1
+    else:
+        return n * factorial(n-1)
+n=int(input("Input a number to compute the factiorial : "))
+print(factorial(n))
+
+
+56.
+
+nl=[]
+for x in range(100,500):
+    if (x%7==0) and (x%5==0):
+        nl.append(str(x))
+print (','.join(nl))
+
+57.
+num = 11
+
+if num > 1:
+
+	for i in range(2, int(num/2)+1):
+
+		
+		if (num % i) == 0:
+			print(num, "is not a prime number")
+			break
+	else:
+		print(num, "is a prime number")
+
+else:
+	print(num, "is not a prime number")
+
+58. 
+
+def power_1(A, B):  
+        
+    if B == 0:  
+        return 1  
+    if B % 2 == 0:  
+        return power_1(A, B // 2) * power(A, B // 2)  
+            
+    return A * power(A, B // 2) * power(A, B // 2)  
+    while (A != 0):  
+        N = N + 1  
+        A = A // 10  
+            
+    return N  
+            
+    N = order_1(A)  
+    temp_1 = A  
+    sum_1 = 0  
+        
+    while (temp_1 != 0):  
+        R_1 = temp_1 % 10  
+        sum_1 = sum_1 + power_1(R_1, N)  
+        temp_1 = temp_1 // 10  
+    
+    return (sum_1 == A)  
+
+A = int(input("Please enter the number to be checked: "))  
+print(is_Armstrong(A))  
+
+59.
+
+class Parent:
+
+	def __init__(self):
+		self.String1 ="Hello"
+		self.String2 ="World"
+
+	def Function2(self):
+		print("Function2 : ", self.String1)
+		return
+
+class Child(Parent):
+
+	def Function1(self):
+		self.Function2()
+		print("Function1 : ", self.String2)
+		return
+Object1 = Parent()
+Object2 = Child()
+
+Object2.Function1()
+
+62.
+number = int(input("Enter the Number: "))
+sum = 0
+for value in range(1, number + 1):
+    sum = sum + value
+print(sum)
+
+63.
+
+print("Enter 10 Elements of List: ")
+nums = []
+for i in range(10):
+    nums.insert(i, input())
+print("Enter an Element to Insert at End: ")
+elem = input()
+nums.append(elem)
+print("\nThe New List is: ")
+print(nums)
+
+64.
+
+my_list = []                        # Initialize array
+while True:
+    number = 0.0
+    input_number = input('Enter a number: ')
+    if input_number == 'done':
+        break
+
+    try:
+        number = float(input_number)
+    except ValueError:
+        print('Invalid input')
+        quit()
+
+    my_list.append(input_number)
+
+if my_list:
+    print('Maximum: ', max(my_list) or None)
+    print('Minimum: ', min(my_list) or None)
+    
+66.
+  
+  myList = ["Bran",11,22,33,"Stark",22,33,11]
+ 
+myList.pop(1)
+
+67.
+
+color = ['Red', 'Green', 'White', 'Black', 'Pink', 'Yellow']
+color = [x for (i,x) in enumerate(color) if i not in (0,4,5)]
+print(color)
+
+
+68.
+
+ # Python program to print all
+# sublist from a given list
+
+# function to generate all the sub lists
+def sub_lists (l):
+	lists = [[]]
+	for i in range(len(l) + 1):
+		for j in range(i):
+			lists.append(l[j: i])
+	return lists
+
+# driver code
+l1 = [1, 2, 3]
+print(sub_lists(l1))
+
+
+69.
+
+list1 = [340, 330, 500]
+list2 = [12, 17, 21]
+print(all(x >= 200 for x in list1))
+print(all(x >= 25 for x in list2))
+
+
+
+70.
+
+list1 = [10, 21, 4, 45, 66, 93, 11]
+even_nos = list(filter(lambda x: (x % 2 == 0), list1))
+
+print("Even numbers in the list: ", even_nos)
+
 
 
 
